@@ -89,21 +89,21 @@ hooks:
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: Scripts/UnzipResourceBundle.sh
-    - location: Scripts/UnzipDataBundle.sh
+    - location: 
+    - location: 
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   AfterInstall:
-    - location: Scripts/RunResourceTests.sh
-      timeout: 180
+    - location: 
+      timeout: 
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
-    - location: Scripts/RunFunctionalTests.sh
-      timeout: 600
+    - location: 
+      timeout: 
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ValidateService:
-    - location: Scripts/MonitorService.sh
-      timeout: 600
+    - location: 
+      timeout: 
       runas: codedeployuser
