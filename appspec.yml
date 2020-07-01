@@ -88,22 +88,22 @@ hooks:
       runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  BeforeInstall:
-    - location: 
-    - location: 
+#  BeforeInstall:
+#    - location: 
+#    - location: 
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  AfterInstall:
-    - location: 
-      timeout: 
+#  AfterInstall:
+#    - location: 
+#      timeout: 
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  ApplicationStart:
-    - location: 
-      timeout: 
+#  ApplicationStart:
+#    - location: 
+#      timeout: 
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-  ValidateService:
-    - location: 
-      timeout: 
+#  ValidateService:
+#    - location: 
+#      timeout: 
       runas: codedeployuser
