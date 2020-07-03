@@ -23,10 +23,10 @@ os: linux
 #   "files" section altogether. A blank or incomplete "files" section
 #   may cause associated deployments to fail.
 files:
-  - source: 
-    destination: 
-  - source: 
-    destination: 
+  - source: /FirstServletProject.war
+    destination: /usr/share/tomcat8/webapps
+#  - source:
+#   destination: 
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions" 
 #   section here that describes special permissions to apply to the files 
@@ -80,30 +80,26 @@ hooks:
 #   in the script specified in "location" starting from the root of the 
 #   revision's file bundle.
   ApplicationStop:
-    - location: 
-      timeout:
-      runas:
-    - location: 
-      timeout:
-      runas: 
+    - location: scripts/stop_application
+      timeout: 300
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-#  BeforeInstall:
-#    - location: 
-#    - location: 
+  BeforeInstall:
+    - location: scripts/uninstall_war_file
+      timeout: 300 
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-#  AfterInstall:
-#    - location: 
+# AfterInstall:
+#   - location: 
 #      timeout: 
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
-#  ApplicationStart:
-#    - location: 
-#      timeout: 
+  ApplicationStart:
+    - location: scripts/start_application
+      timeout: 300
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
 #  ValidateService:
 #    - location: 
 #      timeout: 
-      runas: codedeployuser
+#      runas: codedeployuser
