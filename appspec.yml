@@ -80,12 +80,12 @@ hooks:
 #   in the script specified in "location" starting from the root of the 
 #   revision's file bundle.
   ApplicationStop:
-    - location: scripts/stop_application
+    - location: scripts/stop_application.sh
       timeout: 300
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   BeforeInstall:
-    - location: scripts/uninstall_war_file
+    - location: scripts/uninstall_war_file.sh
       timeout: 300 
 # During the AfterInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
@@ -95,7 +95,7 @@ hooks:
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
-    - location: scripts/start_application
+    - location: scripts/start_application.sh
       timeout: 300
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
