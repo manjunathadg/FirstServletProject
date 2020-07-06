@@ -1,1 +1,1 @@
-curl –user tomcat:tomcat http://ec2-13-233-85-182.ap-south-1.compute.amazonaws.com:8080/manager/text/start?path=/FirstServletProject
+curl –user tomcat:tomcat http://ec2-13-235-51-84.ap-south-1.compute.amazonaws.com:8080/manager/text/start?path=/AWS-HelloWorld-1.0.0
