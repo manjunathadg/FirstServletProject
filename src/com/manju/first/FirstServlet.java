@@ -36,7 +36,7 @@ public class FirstServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		Date date = new Date();
-		out.println(HTML_START + "<h2>Hi There!</h2><br/><h3>Date="+date +"</h3>"+HTML_END);
+		out.println(HTML_START + "<h2>Hi There! CODE DEPLOY </h2><br/><h3>Date="+date +"</h3>"+HTML_END);
 		
 	}
 
