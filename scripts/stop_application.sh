@@ -1,1 +1,1 @@
-curl –user manager:manager http://ec2-13-233-46-187.ap-south-1.compute.amazonaws.com:8080/manager/text/stop?path=/FirstServletProject
+curl –user manager:manager http://ec2-13-234-238-241.ap-south-1.compute.amazonaws.com:8080/manager/text/stop?path=/FirstServletProject
