@@ -1,20 +1,20 @@
-os:linux
+# This is an appspec.yml template file for use with an EC2/On-Premises deployment in CodeDeploy.
+version: 0.0
+os: linux
 
 files:
-	-source: /FirstServletProject.war
-	destination: /usr/share/tomcat8/webapps
+    -source: /FirstServletProject.war
+    destination: /usr/share/tomcat8/webapps
 
 hooks:
-	ApplicationStop:
-	-location: scripts/stop_application
-	timeout: 300
-	
-	BeforeInstall:
-	-location: scripts/uninstall_war_file
-	timeout: 300
-	
-	ApplicationStart:
-	-location: scripts/start_application
-	timeout: 300
-	
-		
+    ApplicationStop:
+    -location: scripts/stop_application
+    timeout: 300
+
+    BeforeInstall:
+    -location: scripts/uninstall_war_file
+    timeout: 300
+
+    ApplicationStart:
+    -location: scripts/start_application
+    timeout: 300
